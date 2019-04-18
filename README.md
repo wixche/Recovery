@@ -9,7 +9,7 @@ A crash recovery framework!
 
 # **Introduction**
 
-[Blog entry with introduction](http://zhengxiaoyong.me/2016/09/05/Android%E8%BF%90%E8%A1%8C%E6%97%B6Crash%E8%87%AA%E5%8A%A8%E6%81%A2%E5%A4%8D%E6%A1%86%E6%9E%B6-Recovery)
+[Blog entry with introduction](http://zhengxiaoyong.com/2016/09/05/Android%E8%BF%90%E8%A1%8C%E6%97%B6Crash%E8%87%AA%E5%8A%A8%E6%81%A2%E5%A4%8D%E6%A1%86%E6%9E%B6-Recovery)
 
 “Recovery” can help you to automatically handle application crash in runtime. It provides you with following functionality:
 
@@ -27,14 +27,14 @@ A crash recovery framework!
 **Using Gradle**
 
 ```gradle
-    compile 'com.zxy.android:recovery:0.1.4'
+    implementation 'com.zxy.android:recovery:1.0.0'
 ```
 
 or
 
 ```gradle
-    debugCompile 'com.zxy.android:recovery:0.1.4'
-    releaseCompile 'com.zxy.android:recovery-no-op:0.1.4'
+    debugImplementation 'com.zxy.android:recovery:1.0.0'
+    releaseImplementation 'com.zxy.android:recovery-no-op:1.0.0'
 ```
 
 
@@ -44,7 +44,7 @@ or
 <dependency>
   	<groupId>com.zxy.android</groupId>
   	<artifactId>recovery</artifactId>
-  	<version>0.1.4</version>
+  	<version>1.0.0</version>
   	<type>pom</type>
 </dependency>
 ```
@@ -145,9 +145,17 @@ You can customize UI by setting these properties in your styles file:
 * `VERSION-0.0.8`——**Add the skip Activity features,method:skip()**
 * `VERSION-0.0.9`——**Update the UI and solve some problems**
 * `VERSION-0.1.0`——**Optimization of crash exception delivery, initial Recovery framework can be in any position, release the official version-0.1.0**
-* `VERSION-0.1.3`——**Add 'no-op' support,v0.1.3**
-* `VERSION-0.1.4`——**update default theme,v0.1.4**
+* `VERSION-0.1.3`——**Add 'no-op' support**
+* `VERSION-0.1.4`——**update default theme**
+* `VERSION-0.1.5`——**fix 8.0+ hook bug**
+* `VERSION-0.1.6`——**update**
+* `VERSION-1.0.0`——**Fix 8.0 compatibility issue**
 
+## **About**
+* **Blog**：[https://zhengxiaoyong.com](https://zhengxiaoyong.com)
+* **Wechat**：
+
+![](https://raw.githubusercontent.com/Sunzxyong/ImageRepository/master/qrcode.jpg)
 # **LICENSE**
 
 ```

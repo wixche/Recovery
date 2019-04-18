@@ -9,7 +9,7 @@ A crash recovery framework!
 
 # **Introduce**
 
-[博客介绍](http://zhengxiaoyong.me/2016/09/05/Android%E8%BF%90%E8%A1%8C%E6%97%B6Crash%E8%87%AA%E5%8A%A8%E6%81%A2%E5%A4%8D%E6%A1%86%E6%9E%B6-Recovery)
+[博客介绍](http://zhengxiaoyong.com/2016/09/05/Android%E8%BF%90%E8%A1%8C%E6%97%B6Crash%E8%87%AA%E5%8A%A8%E6%81%A2%E5%A4%8D%E6%A1%86%E6%9E%B6-Recovery)
 
 “Recovery”帮助你自动处理程序在运行时的Crash，它含有以下几点功能
 
@@ -27,14 +27,14 @@ A crash recovery framework!
 **Gradle**
 
 ```
-	compile 'com.zxy.android:recovery:0.1.4'
+	implementation 'com.zxy.android:recovery:1.0.0'
 ```
 
 或者
 
 ```gradle
-    debugCompile 'com.zxy.android:recovery:0.1.4'
-    releaseCompile 'com.zxy.android:recovery-no-op:0.1.4'
+    debugImplementation 'com.zxy.android:recovery:1.0.0'
+    releaseImplementation 'com.zxy.android:recovery-no-op:1.0.0'
 ```
 
 
@@ -44,7 +44,7 @@ A crash recovery framework!
 		<dependency>
   			<groupId>com.zxy.android</groupId>
   			<artifactId>recovery</artifactId>
-  			<version>0.1.4</version>
+  			<version>1.0.0</version>
   			<type>pom</type>
 		</dependency>
 ```
@@ -134,9 +134,18 @@ public interface RecoveryCallback {
 * `VERSION-0.0.7`——**添加混淆配置**
 * `VERSION-0.0.8`——**增加可配置不需要恢复的Activity,方法:skip()**
 * `VERSION-0.0.9`——**更新UI和解决一些问题**
-* `VERSION-0.1.0`——**异常传递的优化,可在任意位置初始化Recovery框架,发布正式版本-0.1.0**
-* `VERSION-0.1.3`——**增加no-op包,v0.1.3**
-* `VERSION-0.1.4`——**更新默认主.4**
+* `VERSION-0.1.0`——**异常传递的优化,可在任意位置初始化Recovery框架,发布正式版本**
+* `VERSION-0.1.3`——**增加no-op包**
+* `VERSION-0.1.4`——**更新默认主题.**
+* `VERSION-0.1.5`——**fix 8.0+ hook bug**
+* `VERSION-0.1.6`——**update**
+* `VERSION-1.0.0`——**修复8.0上兼容性问题**
+
+## **About**
+* **Blog**：[https://zhengxiaoyong.com](https://zhengxiaoyong.com)
+* **Wechat**：
+
+![](https://raw.githubusercontent.com/Sunzxyong/ImageRepository/master/qrcode.jpg)
 
 # **LICENSE**
 

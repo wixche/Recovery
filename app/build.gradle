@@ -1,16 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    compileSdkVersion 26
+
     resourcePrefix ""
     defaultConfig {
         applicationId "com.zxy.recovery.test"
         minSdkVersion 14
-        targetSdkVersion 24
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -18,17 +17,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    //    compile 'com.zxy.android:recovery:0.1.0'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:design:24.2.0'
-    testCompile 'junit:junit:4.12'
-    debugCompile project(':recovery')
-    releaseCompile project(':recovery-no-op')
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+//    debugCompile 'com.zxy.android:recovery:0.1.5'
+//    releaseCompile 'com.zxy.android:recovery-no-op:0.1.5'
+    implementation 'com.android.support:appcompat-v7:25.2.0'
+    implementation 'com.android.support:design:25.2.0'
+    debugImplementation project(':recovery')
+    releaseImplementation project(':recovery-no-op')
 }
